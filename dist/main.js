@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("function call() {\r\n  return (async () => {\r\n    const city = 'montreal';\r\n    console.log(city);\r\n    const response = await fetch(`api.openweathermap.org/data/2.5/weather?q=${city}&appid=${\"fd924f95635e1935b5fa084c746c3b1d\"}`, { mode: 'cors' });\r\n    console.log(response);\r\n    console.log('hello');\r\n    const data = await response.json();\r\n    console.log(data);\r\n  })\r\n}\r\n\r\ncall();\r\n\r\nconsole.log('hello?');\n\n//# sourceURL=webpack://weatherapp/./src/index.js?");
+eval("async function call() {\r\n  const city = 'montreal';\r\n\r\n  const weatherData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${\"fd924f95635e1935b5fa084c746c3b1d\"}`, { mode: 'cors' })\r\n    .then(response => response.json())\r\n    .then(data => console.log(data))\r\n    .catch(err => console.log(err));\r\n}\r\ncall();\r\n\n\n//# sourceURL=webpack://weatherapp/./src/index.js?");
 
 /***/ })
 

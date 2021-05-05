@@ -1,15 +1,9 @@
-function call() {
-  return (async () => {
-    const city = 'montreal';
-    console.log(city);
-    const response = await fetch(`api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}`, { mode: 'cors' });
-    console.log(response);
-    console.log('hello');
-    const data = await response.json();
-    console.log(data);
-  })
+async function call() {
+  const city = 'montreal';
+
+  const weatherData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}`, { mode: 'cors' })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(err => console.log(err));
 }
-
 call();
-
-console.log('hello?');
