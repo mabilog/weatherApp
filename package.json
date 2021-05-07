@@ -11,6 +11,7 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "dotenv-webpack": "^7.0.2",
+    "node-fetch": "^2.6.1",
     "webpack": "^5.36.2",
     "webpack-cli": "^4.6.0",
     "webpack-env": "^0.8.0"

@@ -165,3 +165,33 @@ body{
   border-radius: 20px;
   background: var(--text_light);
 }
+
+.weather-info figcaption {
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.weather-info .city-temp {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: var(--text_dark);
+}
+
+.weather-info .city sup {
+  font-size: 0.5em;
+}
+
+.weather-info .city-name sup {
+  padding: 0.2em 0.6em;
+  border-radius: 30px;
+  color: var(--text_light);
+  background: var(--orange);
+}
+
+.weather-info .city-icon {
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+}
